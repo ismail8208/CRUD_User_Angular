@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -21,7 +20,6 @@ import { FooterComponent } from './footer/footer.component';
     UserDetailsComponent,
     AddUserComponent,
     NavbarComponent,
-    FooterComponent
    
    
   ],
