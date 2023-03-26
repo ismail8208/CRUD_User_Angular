@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h1 class="text-center my-4">User Details</h1>
+
+        </div>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="userDetails.data.avatar" class="img-fluid mb-3">
+        </div>
+        <div class="col-md-8">
+
+            <h3>Name: {{ userDetails.data.first_name }} {{ userDetails.data.last_name }}</h3>
+            <h3>ID: {{ userDetails.data.id }}</h3>
+            <p>Email: {{ userDetails.data.email }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center mt-4">
+            <button routerLink="/users" class="btn btn-outline-light" class="btn btn-outline-dark">Back</button>
+        </div>
+    </div>
+
+</div>
