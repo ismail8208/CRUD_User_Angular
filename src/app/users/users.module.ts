@@ -4,7 +4,6 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { RouterModule } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -18,9 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     UsersListComponent,
     UserDetailsComponent,
-    AddUserComponent,
-    NavbarComponent,
-   
+    AddUserComponent,   
    
   ],
   imports: [

@@ -1,11 +1,11 @@
-<app-navbar></app-navbar>
-<div class="container">
+
+<div class="container" class="mx-auto" style="width: 800px;margin: 10px 30px 5px 5px">
     <div class="card">
         <div class="card-header">
             Users
         </div>
 
-        <div class="card-body">
+        <div class="card-body" >
             <div class="table-responsive">
                 <table class="table">
                     <thead>
@@ -27,7 +27,7 @@
                             </td>
                             <td>{{user.first_name}} {{user.last_name}}</td>
                             <td> {{user.email}}</td>
-                            <td> <a  class="show" [routerLink]="['/user', user.id]">show more about: {{user.first_name}}</a></td>
+                            <td> <a  class="show" [routerLink]="['/user', user.id]">View profile: {{user.first_name}}</a></td>
 
                         </tr>
                     </tbody>

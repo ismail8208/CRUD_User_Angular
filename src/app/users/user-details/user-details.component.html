@@ -1,27 +1,28 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-
-            <h1 class="text-center my-4">User Details</h1>
-
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <img [src]="userDetails.data.avatar" class="img-fluid rounded-circle mb-3" alt="User Avatar">
+          </div>
+          <div class="col-md-8">
+            <h5 class="card-title">User Details</h5>
+            <hr>
+            <div class="form-group">
+              <label class="font-weight-bold text-secondary">ID:</label>
+              <span class="text-muted">{{ userDetails.data.id }}</span>
+            </div>
+            <div class="form-group">
+              <label class="font-weight-bold text-secondary">Name:</label>
+              <span class="text-muted">{{ userDetails.data.first_name }} {{ userDetails.data.last_name }}</span>
+            </div>
+            <div class="form-group">
+              <label class="font-weight-bold text-secondary">Email:</label>
+              <span class="text-muted"> {{ userDetails.data.email }}</span>
+            </div>
+          </div>
         </div>
-        <hr>
+        <button class="btn btn-secondary mt-4" routerLink="/users" >Back</button> <!--(click)="onBack()"-->
+      </div>
     </div>
-    <div class="row">
-        <div class="col-md-4">
-            <img [src]="userDetails.data.avatar" class="img-fluid mb-3">
-        </div>
-        <div class="col-md-8">
-
-            <h3>Name: {{ userDetails.data.first_name }} {{ userDetails.data.last_name }}</h3>
-            <h3>ID: {{ userDetails.data.id }}</h3>
-            <p>Email: {{ userDetails.data.email }}</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 text-center mt-4">
-            <button routerLink="/users" class="btn btn-outline-light" class="btn btn-outline-dark">Back</button>
-        </div>
-    </div>
-
-</div>
+  </div>

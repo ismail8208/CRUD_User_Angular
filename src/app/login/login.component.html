@@ -1,45 +1,47 @@
-<div class="container">
-  <div class="row1">
-    <h1 id="welcome">Welcome to our site </h1>
-    <h2>Login</h2>
-  </div>
+<div class="login-box">
+  <h2>Login</h2>
   <form #LoginForm="ngForm" (submit)="loginUser(LoginForm)">
-    
-    <div class="row2">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input ngModel name="email" required type="email" name="email" class="form-control" id="exampleInputEmail1"
-          aria-describedby="emailHelp" placeholder="Enter email" />
-        <span class="text-danger" *ngIf=" 
-        LoginForm.controls['email']?.invalid && 
-        LoginForm.controls['email']?.dirty ">
-          Email is required
-        </span>
+
+      <div class="user-box">
+
+          <input type="text" name="email" required ngModel name="email" id="exampleInputEmail1">
+          <label>Email</label>
+
+          <span class="text-danger" *ngIf=" 
+          LoginForm.controls['email']?.invalid && 
+          LoginForm.controls['email']?.dirty ">
+            Email is required
+          </span>
+
       </div>
 
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input ngModel name="password" required type="password" #passwordVar="ngModel" minlength="6" name="password"
-          class="form-control" id="exampleInputPassword1" placeholder="Password" />
-        <span class="text-danger" *ngIf="
+      <div class="user-box">
+
+          <input type="password" name="password" required ngModel name="password" #passwordVar="ngModel" id="exampleInputPassword1">
+          <label>Password</label>
+
+          <span class="text-danger" *ngIf="
           LoginForm.controls['password']?.invalid && 
           LoginForm.controls['password']?.dirty
           ">
           required
         </span>
-        <span class="text-danger" *ngIf="  passwordVar.errors?.['minlength']">
-          minimum light is 6 chat
-        </span>
 
       </div>
-      
-      <div class="row3">
-        <button type="submit" class="btn btn-outline-light">login</button>
+
+      <div class="button-form">
+          <button type="submit" id="submit">login</button>
+          <div id="register">
+
+              Don't have an account ?
+              <a href="#">Register</a>
+
+          </div>
+
       </div>
       
       <app-login-dialog *ngIf="loginFailed"></app-login-dialog>
     
-    </div>
-  
+
   </form>
 </div>
